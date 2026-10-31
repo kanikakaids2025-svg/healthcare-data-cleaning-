@@ -1,0 +1,11 @@
+field_name,data_type,description,category,expected_range,notes
+PatientID,text,Pseudonymous patient code (PAT-xxx),Identifier (pseudonymous),"Unique, format PAT-###",Not a real MRN
+Age,integer,Patient age in years,Demographic,0-120,Quasi-identifier
+Gender,text,Patient gender,Demographic,Male / Female,Quasi-identifier
+Diagnosis,text,Primary diagnosis,Clinical (sensitive),Non-empty text,
+PrimaryMedication,text,Main medication prescribed,Clinical (sensitive),Non-empty text,
+DosageMg,float,Dose in mg,Clinical,"> 0, check per medication",Varies by drug (0.05 to 850)
+TreatmentDurationDays,integer,Treatment length in days,Clinical,1-365+,
+Readmitted,text,Hospital readmission flag,Clinical outcome,Yes / No,
+BloodPressure,text,Systolic/diastolic in mmHg,Clinical (sensitive),Format ###/##,Will split into 2 columns
+CholesterolLevel,integer,Cholesterol in mg/dL,Clinical (sensitive),100-400,
